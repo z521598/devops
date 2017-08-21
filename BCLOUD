@@ -1,0 +1,1 @@
+BUILD_SUBMITTER -x -m baidu/agile-test/mvntest -c "cd baidu/agile-test/mvntest && mkdir output &&cp BCLOUD ./output/" -u ./
