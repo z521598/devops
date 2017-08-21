@@ -13,6 +13,6 @@ public class HomeController {
     @RequestMapping({"", "/"})
     public String home() {
 
-        return "101.236.1.205";
+        return "yezhaofeng";
     }
 }
