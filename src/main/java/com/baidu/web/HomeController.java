@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.baidu.PostBean;
+import com.baidu.bean.PostBean;
 
 /**
  * Created by langshiquan on 17/7/14.

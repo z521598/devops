@@ -1,4 +1,4 @@
-package com.baidu;
+package com.baidu.bean;
 
 /**
  * Created by langshiquan on 17/11/8.
