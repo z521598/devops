@@ -17,7 +17,7 @@ public class HomeController {
     @RequestMapping({"", "/"})
     public String home() {
 
-        return "zdh";
+        return "lsq";
     }
 
     @RequestMapping(value = "/testPost", method = RequestMethod.POST)
