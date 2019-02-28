@@ -19,7 +19,7 @@ public class ServiceAsepct {
     @Around("execution(* com.baidu.service.*.*(..))")
     public Object doAround(ProceedingJoinPoint joinPoint) throws Throwable{
         long time = System.currentTimeMillis();
-        System.out.println(time);
+//        System.out.println(time);
         try {
             Object obj = joinPoint.proceed();
             return obj;
