@@ -1,4 +1,4 @@
-package com.baidu;
+package com.baidu.utils;
 
 import org.springframework.aop.framework.AdvisedSupport;
 import org.springframework.aop.framework.AopProxy;
@@ -11,19 +11,19 @@ import java.lang.reflect.Field;
  */
 public class AopTargetUtils {
     /**
-     * 获取 目标对象 
-     * @param proxy 代理对象 
+     * 获取 目标对象
+     * @param proxy 代理对象
      * @return
      * @throws Exception
      */
     public static Object getTarget(Object proxy) throws Exception {
         if(!AopUtils.isAopProxy(proxy)) {
-            return proxy;//不是代理对象 
+            return proxy;//不是代理对象
             }
 
         if(AopUtils.isJdkDynamicProxy(proxy)) {
             return getJdkDynamicProxyTargetObject(proxy);
-            } else { //cglib 
+            } else { //cglib
             return getCglibProxyTargetObject(proxy);
             }
     }
