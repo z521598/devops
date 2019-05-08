@@ -3,6 +3,7 @@ package com.baidu.service;
 import java.io.IOException;
 import java.security.PrivateKey;
 import java.security.cert.CertificateException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.HashMap;
@@ -52,11 +53,15 @@ public class TokenService implements ITokenService {
     }
 
     private Map<String, Object> createAccess(String scope) {
+        Map<String, Object> access = new HashMap<>();
+        if (StringUtils.isBlank(scope)) {
+            access.put("access", new ArrayList<>());
+            return access;
+        }
         String[] elements = scope.split(":");
         String resourceType = elements[0];
         String resourceName = elements[1];
         String actions = elements[2];
-        Map<String, Object> access = new HashMap<>();
         Map<String, Object> resource = new HashMap<>();
 
         if (resourceType.equals("repository") && resourceName.equals("sec")) {
